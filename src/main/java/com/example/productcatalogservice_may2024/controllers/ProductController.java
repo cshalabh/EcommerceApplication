@@ -72,12 +72,11 @@ public class ProductController {
 
     private ProductDto getProductDto(Product product){
         ProductDto productDto = new ProductDto();
+        productDto.setId(product.getId());
         productDto.setName(product.getName());
         productDto.setDescription(product.getDescription());
-
         productDto.setImageUrl(product.getImageUrl());
         productDto.setPrice(product.getPrice());
-        productDto.setId(product.getId());
 //        CategoryDto categoryDto = new CategoryDto();
 //        categoryDto.setName(product.getCategory().getName());
 //        productDto.setCategory(categoryDto);
@@ -93,6 +92,7 @@ public class ProductController {
 
     private Product getProduct(ProductDto productDto){
         Product product = new Product();
+        productDto.setId(product.getId());
         productDto.setName(product.getName());
         productDto.setDescription(product.getDescription());
         productDto.setImageUrl(product.getImageUrl());
